@@ -1,0 +1,10 @@
+:2015
+
+log stdout
+
+errors stdout
+
+redir https://{$REDIR_URI} {
+    transparent
+}
+
