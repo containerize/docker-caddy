@@ -1,0 +1,10 @@
+:2015
+
+log stdout
+
+errors stdout
+
+proxy / {$PROXY_HOST}:{$PROXY_PORT} {
+    transparent
+}
+
