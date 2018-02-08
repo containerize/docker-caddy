@@ -1,5 +1,4 @@
 :2015
 
-log stdout
-
-errors stdout
+log /var/log/access.log
+errors /var/log/errors.log
