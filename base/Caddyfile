@@ -1,4 +1,0 @@
-:2015
-
-log /var/log/access.log
-errors /var/log/errors.log

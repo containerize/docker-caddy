@@ -23,7 +23,7 @@ if [ ! -d "$DOCKER_TLS_TEMP_PATH" ]; then
         -key "$DOCKER_TLS_TEMP_PATH/server-key.pem" \
         -out "$DOCKER_TLS_TEMP_PATH/server.csr"
 
-    echo "subjectAltName = DNS:$DOCKER_TLS_HOST,IP:127.0.0.1" >> "$DOCKER_TLS_TEMP_PATH/extfile.cnf"
+    echo "subjectAltName = DNS:$DOCKER_TLS_DNS,IP:$DOCKER_TLS_HOST" >> "$DOCKER_TLS_TEMP_PATH/extfile.cnf"
     echo "extendedKeyUsage = serverAuth" >> "$DOCKER_TLS_TEMP_PATH/extfile.cnf"
 
     openssl x509 -req -days 365 \
