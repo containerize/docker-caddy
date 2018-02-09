@@ -41,7 +41,7 @@ if [ ! -d "$DOCKER_TLS_TEMP_PATH" ]; then
         -key "$DOCKER_TLS_TEMP_PATH/key.pem" \
         -out "$DOCKER_TLS_TEMP_PATH/client.csr"
 
-    echo "extendedKeyUsage = clientAuth" > "$DOCKER_TLS_TEMP_PATH/extfile.cnf"
+    echo "extendedKeyUsage = clientAuth" >> "$DOCKER_TLS_TEMP_PATH/extfile.cnf"
 
     openssl x509 -req -days 365 \
         -passin file:"$DOCKER_TLS_TEMP_PATH/passphrasefile.txt" \
