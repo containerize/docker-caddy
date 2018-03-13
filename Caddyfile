@@ -5,6 +5,7 @@ log stdout
 errors stdout
 
 proxy / {$PROXY_HOST}:{$PROXY_PORT} {
+    websocket
     transparent
 }
 
